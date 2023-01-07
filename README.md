@@ -2,13 +2,35 @@
 
 aidoc is a command line interface (CLI) tool that uses AI to automatically generate documentation for your code.
 
+[![PyPI](https://badge.fury.io/py/aidoc.svg)](https://pypi.org/project/aidoc/0.1.0/)
+
+## Requirements
+
+- OpenAI API key: [https://beta.openai.com/](https://beta.openai.com/)
+- Python 3.6 or higher
+
+
 ## Installation
+
+- standalone
+
+```
+python3 -m pip install aidoc
+```
+
+- create a virtual environment and install the package (recommended)
 
 ```bash
 pip install aidoc
 ```
 
 ## Usage
+
+To configure the API key and model for aidoc, run the following command:
+
+```
+aidoc configure
+```
 
 To generate documentation for a source file or directory, run the following command:
 
@@ -21,12 +43,6 @@ You can also specify the following optional arguments:
 - `-o` or `--overwrite`: Overwrite existing docstrings
 - `-f` or `--format`: Format the entire source file using black (default=True)
 - `-pr` or `--pull-request`: Create a pull request with the changes
-
-To configure the API key and model for aidoc, run the following command:
-
-```
-aidoc configure
-```
 
 ## Examples
 

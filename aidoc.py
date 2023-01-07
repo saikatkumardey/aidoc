@@ -440,11 +440,17 @@ def configure():
 
 def main():
     """
-    Usage: python aidocgen.py <source_file_or_directory>
+    Usage: aidoc gen <source_file_or_directory> [options]
+    Options:
+        -h --help to see more options
     """
+    global API_KEY, MODEL
+
     args = cli()
 
-    global API_KEY, MODEL
+    if args.command is None:
+        print(main.__doc__)
+        return
 
     if args.command == "configure":
         configure()
