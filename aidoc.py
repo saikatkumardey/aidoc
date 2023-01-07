@@ -262,7 +262,7 @@ def insert_docstring(
             isinstance(node, ast.FunctionDef) or isinstance(node, ast.ClassDef)
         ) and node.name == function_or_class.name:
             docstring = ast.get_docstring(node)
-            if len(docstring.strip()) > 0 and not overwrite:
+            if docstring and len(docstring.strip()) > 0 and not overwrite:
                 logger.info(
                     f"{node.name}'s docstring already exists. Skipping..."
                 )
