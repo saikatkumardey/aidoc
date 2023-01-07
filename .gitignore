@@ -133,3 +133,5 @@ dmypy.json
 .vscode
 example
 .DS_Store
+
+demo/*.mp4
