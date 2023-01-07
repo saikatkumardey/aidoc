@@ -30,9 +30,5 @@ python setup.py sdist bdist_wheel
 # upload to PyPI
 twine upload dist/*
 
-# tag the release
-git tag -a v$version -m "release v$version"
-git push origin v$version
-
 # clean up
 rm -rf build dist .egg *.egg-info

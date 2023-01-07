@@ -4,11 +4,14 @@
 
 aidoc is a command line interface (CLI) tool that uses AI to automatically generate documentation for your code.
 
+<p align="center">
+  <img width="600" src="demo/demo.svg">
+</p>
+
 ## Requirements
 
 - OpenAI API key: [https://beta.openai.com/](https://beta.openai.com/)
 - Python 3.6 or higher
-
 
 ## Installation
 
