@@ -1,8 +1,8 @@
+[![PyPI](https://badge.fury.io/py/aidoc.svg)](https://pypi.org/project/aidoc/)
+
 # aidoc
 
 aidoc is a command line interface (CLI) tool that uses AI to automatically generate documentation for your code.
-
-[![PyPI](https://badge.fury.io/py/aidoc.svg)](https://pypi.org/project/aidoc/0.1.2/)
 
 ## Requirements
 
