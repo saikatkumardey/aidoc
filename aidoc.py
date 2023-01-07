@@ -27,14 +27,10 @@ def cli():
     parser = argparse.ArgumentParser(
         description="""Document your code automatically using AI."""
     )
-
-    # Create a parser for the gen command
     subcommands = parser.add_subparsers(dest="command")
     gen_parser = subcommands.add_parser(
         "gen", help="generate documentation for source file"
     )
-
-    # Add the source_file argument to the gen parser
     gen_parser.add_argument(
         "source_file",
         type=Path,
@@ -59,8 +55,6 @@ def cli():
         action="store_true",
         help="create a pull request with the changes",
     )
-
-    # Create a parser for the configure command
     subcommands.add_parser("configure", help="configure API key and model")
 
     args = parser.parse_args()
@@ -438,6 +432,20 @@ def configure():
     return api_key, model
 
 
+def read_config():
+    """Reads the API key and model from the configuration file."""
+    try:
+        config_dir = CONFIG_DIR.expanduser()
+        with open(config_dir / "config.ini", "r") as config_file:
+            lines = config_file.readlines()
+            api_key = lines[0].strip().split("=")[1]
+            model = lines[1].strip().split("=")[1]
+            return api_key, model
+    except Exception as e:
+        logger.error(f"Unable to read configuration file")
+        return None, None
+
+
 def main():
     """
     Usage: aidoc gen <source_file_or_directory> [options]
@@ -468,20 +476,6 @@ def main():
         python_files = glob.glob(f"{source_path}/**/*.py", recursive=True)
         for python_file in python_files:
             process_file(python_file, args)
-
-
-def read_config():
-    """Reads the API key and model from the configuration file."""
-    try:
-        config_dir = CONFIG_DIR.expanduser()
-        with open(config_dir / "config.ini", "r") as config_file:
-            lines = config_file.readlines()
-            api_key = lines[0].strip().split("=")[1]
-            model = lines[1].strip().split("=")[1]
-            return api_key, model
-    except Exception as e:
-        logger.error(f"Unable to read configuration file")
-        return None, None
 
 
 if __name__ == "__main__":
