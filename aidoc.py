@@ -456,8 +456,6 @@ def main():
         configure()
         return
 
-    print(args)
-
     API_KEY, MODEL = read_config()
     if not API_KEY and not MODEL:
         API_KEY, MODEL = configure()
