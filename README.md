@@ -33,25 +33,24 @@ aidoc configure
 **Generate docstrings for the main.py file:**
 
 ```
-aidocgen main.py
+aidoc gen main.py
 ```
 
 **Generate docstrings for all Python files in the src directory and its subdirectories:**
 
 ```
-aidocgen src
+aidoc gen src
 ```
 
 **Generate docstrings and create a pull request with the changes:**
 
 ```
-aidocgen main.py -pr
+aidoc gen main.py -pr
 ```
 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
 
 ## License
 
