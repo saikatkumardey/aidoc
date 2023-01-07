@@ -12,13 +12,13 @@ aidoc is a command line interface (CLI) tool that uses AI to automatically gener
 
 ## Installation
 
-- standalone
+- globally install the package
 
 ```
 python3 -m pip install aidoc
 ```
 
-- create a virtual environment and install the package (recommended)
+- (recommended) create a virtual environment and install the package
 
 ```bash
 pip install aidoc
