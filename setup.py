@@ -13,7 +13,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="aidoc",
-    version="0.1.0",
+    version="0.1.1",
     author="Saikat Kumar Dey",
     author_email="deysaikatkumar@gmail.com",
     description="A simple CLI tool to generate documentation for your Python projects automatically.",
