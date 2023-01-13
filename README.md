@@ -67,6 +67,17 @@ aidoc gen src
 aidoc gen main.py -pr
 ```
 
+## Which model to choose?
+
+- `code-davinci-002`
+  - most capable codex model
+  - generated docstrings are more accurate and detailed
+- `code-cushman-001`
+  - slightly faster.
+  - generated docstrings are less accurate
+
+To learn more see [https://beta.openai.com/docs/models/codex](https://beta.openai.com/docs/models/codex)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
