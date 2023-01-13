@@ -13,12 +13,12 @@ import astor
 import black
 import openai
 
-logger = logging.getLogger("aidocgen")
+logger = logging.getLogger("aidoc")
 handler = logging.StreamHandler()
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
-CONFIG_DIR = Path("~/.config/aidocgen")
+CONFIG_DIR = Path("~/.config/aidoc")
 API_KEY, MODEL = None, None
 DEFAULT_MODEL = "code-davinci-002"
 
